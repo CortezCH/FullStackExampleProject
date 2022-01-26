@@ -1,0 +1,35 @@
+<h2>To-Do List</h2>
+
+<div *ngIf="toDos" >
+    <div *ngFor="let todo of toDos; let i=index">
+        <div [ngClass]="{ 'completeToDo': todo.isCompleted === true,
+        'incompleteToDo': todo.isCompleted === false}" >
+            <span id="ToDoDisplay{{todo.id}}">
+                <h4>{{i+1}}: {{todo.name}}</h4>
+                <p>{{todo.description}}</p>
+                <div *ngIf="todo.isCompleted === false">
+                    <p>Completed? Not Completed</p>
+                </div>
+                <div *ngIf="todo.isCompleted === true">
+                    <p>Completed? Completed</p>
+                </div>
+                <button (click)="DeleteToDo(todo.id, i+1)">Delete To-Do</button>
+                <button (click)="ToggleToDo(todo.id)">Edit To-Do</button>
+            </span>
+
+            <span id="ToDoEdit{{todo.id}}" style="display: none;">
+                <app-edit-to-do [toDoID]=todo.id></app-edit-to-do>
+                <button (click)="ToggleToDo(todo.id)">show To-Do</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div style="border: 1px solid black; padding: 5px; background-color: white; border-radius: 8px;">
+    <!--Creates a reference to another componenet-->
+    <app-create-to-do></app-create-to-do>
+</div>
+
+<hr>

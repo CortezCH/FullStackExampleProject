@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+
+<div style="border: 1px solid black; margin: 2px; padding: 5px;" *ngFor="let movie of movieContainer; let i = index">
+    <span id="Display{{movie.movieID}}">
+        <h5>{{movie.title}}</h5>
+        <p>ID: {{movie.movieID}}</p>
+        <p>Genre: {{movie.genre}}</p>
+        <p>Release Year: {{movie.releaseDate}}</p>
+        <button style="margin-bottom: 2px; margin-right: 2px;" (click)="DeleteEntry(movie.movieID,i)">Delete {{movie.title}}</button>
+        <button (click)="EditMovie(movie.movieID)">Edit Movie</button>
+    </span>
+
+    <span id="Edit{{movie.movieID}}" style="display: none;">
+        <app-update-movie [movieID]=movie.movieID></app-update-movie>
+        <button (click)="ShowMovie(movie.movieID)">Display Movie</button>
+    </span>
+</div>
+
+<hr>
+
+<div style="border: 1px solid black; padding: 5px;">
+    <!--Creates a reference to another componenet-->
+    <app-create-movie></app-create-movie>
+</div>
+
+<hr>

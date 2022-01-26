@@ -1,0 +1,12 @@
+<h2>Edit To-Do</h2>
+
+<p>Name:</p>
+<input id="EditToDoName{{toDoID}}" type="text" value="{{currentToDo.name}}"/>
+<br>
+<p>Description:</p>
+<input id="EditToDoDescription{{toDoID}}" type="text" value="{{currentToDo.description}}"/>
+<br>
+<p>Hours:</p>
+<input id="EditToDoHours{{toDoID}}" type="number" min="1" max="40" value="{{currentToDo.hoursNeeded}}"/>
+
+<button class="editSubmitButton" (click)="EditToDo()">Edit ToDo</button>

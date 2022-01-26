@@ -1,0 +1,11 @@
+.editSubmitButton{
+    border-color: red;
+    border-radius: 8px;
+    background-color: rgb(255, 79, 79);
+}
+
+.editSubmitButton:hover{
+    border-color: red;
+    border-radius: 8px;
+    background-color: rgb(95, 22, 22);
+}

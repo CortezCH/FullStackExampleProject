@@ -1,0 +1,41 @@
+.incompleteToDo{
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.incompleteToDo button{
+    border-color: red;
+    border-radius: 8px;
+    background-color: rgb(255, 79, 79);
+}
+
+.incompleteToDo button:hover{
+    border-color: red;
+    border-radius: 8px;
+    background-color: rgb(95, 22, 22);
+}
+
+.completeToDo{
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.completeToDo button{
+    border-color: green;
+    border-radius: 8px;
+    background-color: rgb(64, 255, 64);
+}
+
+.completeToDo button:hover{
+    border-color: green;
+    border-radius: 8px;
+    background-color: rgb(7, 22, 7);
+}
+
+
